@@ -1,10 +1,13 @@
 public class Human {
     String name;
     int age;
+    int child;
 
-    public Human(String name, int age) {
+    public Human(String name, int age, int child) {
         this.name = name;
         this.age = age;
+        this.child = child;
+
     }
 
     public String getName() {
@@ -23,6 +26,9 @@ public class Human {
         this.age = age;
     }
 
-    
-    
+    public int getChild(){return child;}
+
+    public void setChild(int child) {
+        this.child = child;
+    }
 }
