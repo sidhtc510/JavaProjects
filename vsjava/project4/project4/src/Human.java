@@ -31,4 +31,5 @@ public class Human {
     public void setChild(int child) {
         this.child = child;
     }
+
 }
