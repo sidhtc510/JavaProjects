@@ -1,0 +1,6 @@
+public class App {
+    public static void main(String[] args) {
+        Human hmn = new Human("tolik", 37);
+        System.out.println(hmn.name + " " + hmn.getAge());
+    }
+}
