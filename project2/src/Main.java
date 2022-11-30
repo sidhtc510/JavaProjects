@@ -81,7 +81,8 @@ public class Main {
         Book book = new Book("kolobok", 190, 5000);
         System.out.println("book title : " + book.getTitle() + "\n quantity of pages : " + book.getqPages() + "\n price : " + book.getPrice());
         book.setqPages(200);
-        book.printOutBookClass();
+        // book.printOutBookClass();
+        System.out.println(book.printOutBookClass());
     }
 
     static int sub(int a, int b) {

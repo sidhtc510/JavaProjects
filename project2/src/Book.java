@@ -33,7 +33,7 @@ public class Book {
         this.price = price;
     }
 
-    public void printOutBookClass() {
-        System.out.println("title : " + title + " quantity of pages : " + qPages + " price : " + price);
+    public String printOutBookClass() {
+        return("title : " + title + " quantity of pages : " + qPages + " price : " + price);
     }
 }
