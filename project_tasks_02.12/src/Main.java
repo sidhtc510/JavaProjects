@@ -7,12 +7,16 @@ public class Main {
     }
 
     static public void minim(){
+        System.out.println("enter num 1");
         int a = scanner.nextInt();
+        System.out.println("enter num 2");
         int b = scanner.nextInt();
+        System.out.println("enter num 3");
         int c = scanner.nextInt();
        int min;
         if (a < b){
             min = a;
+            
             System.out.println(a);
         }else{
             min = b;
