@@ -35,16 +35,16 @@ public class Main {
         System.out.println(f);
 
         // task3
-        int var_int = 2000000000; // -2,147,483,648 to 2,147,483,647
-        long var_long = 1000000000000L; // -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+        int var_int = 2147483647; // -2,147,483,648 to 2,147,483,647
+        long var_long = 9223372036854775807L; // -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
         short var_short = 32767; // -32,768 to 32,767
         byte var_byte = 127; // -128 to 127
 
-        System.out.println(var_int + 147483648); // переполнение работает
-        System.out.println(var_byte + 147483648); // с байт и шорт переполнение не работает. более того, показывает
-                                                  // разный результат
-        System.out.println(var_short + 147483648); // с байт и шорт переполнение не работает. более того, показывает
-                                                   // разный результат
+        System.out.println(var_int + 1); // переполнение работает
+        System.out.println(var_long +1); //переполнение работает
+        System.out.println(var_short + 1); // с шорт переполнение не работает.
+        System.out.println(var_byte + 1); // с байт переполнение не работает.
+        
 
         // task 4 (call functions)
         int x = 15;
@@ -61,27 +61,32 @@ public class Main {
     }
 
     // task4 (Functions declaration)
-    public static void myProcedure() {
+    public static void myProcedure() { // рпоцедура без арнументов
         System.out.println(1 + 1);
     }
 
-    public static void myProcedureWithArg(int a, int b) {
+
+    public static void myProcedureWithArg(int a, int b) {// процедура с аргументами
         System.out.println(a + b);
     }
 
-    public static int myFunc() {
+
+    public static int myFunc() {  // функция int без арнументов
         return 1 + 1;
     }
 
-    public static int myFuncWithArg(int a, int b) {
+
+    public static int myFuncWithArg(int a, int b) {// функция int с аргументами
         return a + b;
     }
 
-    public static String myFuncString() {
+
+    public static String myFuncString() { // функция string без аргументов
         return "hello";
     }
 
-    public static String myFuncStringWithArg(String a, String b) {
+    
+    public static String myFuncStringWithArg(String a, String b) {// функция string с аргументами
         return ("hello" + a + b);
     }
 
