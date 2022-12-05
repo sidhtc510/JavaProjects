@@ -37,14 +37,13 @@ public class Main {
         // task3
         int var_int = 2147483647; // -2,147,483,648 to 2,147,483,647
         long var_long = 9223372036854775807L; // -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
-        short var_short = 32767; // -32,768 to 32,767
+        short var_short = 32; // -32,768 to 32,767
         byte var_byte = 127; // -128 to 127
 
         System.out.println(var_int + 1); // переполнение работает
-        System.out.println(var_long +1); //переполнение работает
+        System.out.println(var_long + 1); // переполнение работает
         System.out.println(var_short + 1); // с шорт переполнение не работает.
         System.out.println(var_byte + 1); // с байт переполнение не работает.
-        
 
         // task 4 (call functions)
         int x = 15;
@@ -58,45 +57,50 @@ public class Main {
 
         // task5 (call function)
         System.out.println(reverseString(str1));
+        // task5
+        for (int ix = str1.length() - 1; ix >= 0; ix--) {
+            System.out.print(str1.charAt(ix));
+        }
+
     }
 
     // task4 (Functions declaration)
-    public static void myProcedure() { // рпоцедура без арнументов
+    public static void myProcedure() { // процедура без арнументов
         System.out.println(1 + 1);
     }
-
 
     public static void myProcedureWithArg(int a, int b) {// процедура с аргументами
         System.out.println(a + b);
     }
 
-
-    public static int myFunc() {  // функция int без арнументов
+    public static int myFunc() { // функция int без арнументов
         return 1 + 1;
     }
-
 
     public static int myFuncWithArg(int a, int b) {// функция int с аргументами
         return a + b;
     }
 
-
     public static String myFuncString() { // функция string без аргументов
         return "hello";
     }
 
-    
     public static String myFuncStringWithArg(String a, String b) {// функция string с аргументами
         return ("hello" + a + b);
     }
 
     // task 5 (стырял с интернета)
-    public static String reverseString(String str) {                // объявляю ф-ию со стринг аргументом
-        char ch[] = str.toCharArray();                                       // в массив чар добавляю по 1 символу ["h", "e", "l", "l", "o", ]
-        String rev = "";                                                               // объявляю переменную стринг
-        for (int i = ch.length - 1; i >= 0; i--) {                          // циклом вывожу элементы массива в обратном порядке
-            rev += ch[i];                                                               // дописываю символ на каждой итерации
+    public static String reverseString(String str) { // объявляю ф-ию со стринг аргументом
+        char ch[] = str.toCharArray(); // в массив чар добавляю по 1 символу ["h", "e", "l", "l", "o", ]
+        String rev = ""; // объявляю переменную стринг
+        for (int i = ch.length - 1; i >= 0; i--) { // циклом вывожу элементы массива в обратном порядке
+            rev += ch[i]; // дописываю символ на каждой итерации
         }
-        return rev;                                                                     // ретарн
+        return rev; // ретарн
     }
 }
+
+// Task 5 ‹стырял у Сэйде
+// public static String reverse(String str1) {
+// return new StringBuilder(str1).reverse().toString();
+// }
