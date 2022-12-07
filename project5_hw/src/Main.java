@@ -17,28 +17,27 @@ public class Main {
         // int[] arr_i = new int [10];
         // double[] arr_d = new double [10];
 
-        int[] arr_i = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 15, 18 };
+        int[] arr_i = { 1, 3, 4, 5, 6, 7, 8, 9, 12, 15, 18,21,24};
         double[] arr_d = { 1.1, 2.1, 3.1, 4.1, 5.1, 6.1, 7.1, 8.1, 9.1 };
         String input = "Hello World and Hello Anatoliy";
 
         // task 1
-        render_i(arr_i);
-        render_d(arr_d);
+                // render_i(arr_i);
+                // render_d(arr_d);
 
         // task 2
-        calc();
+                // calc();
 
         // task 3
-        kratn_trem(arr_i);
+                    kratn_trem(arr_i);
 
         // task 4
-        reverseArr(arr_i);
+                    // reverseArr(arr_i);
 
 
-        // task 5
-     
-        String vowels = getVowels(input);
-        System.out.println(vowels);
+        // task 5          
+                // String vowels = getVowels(input);
+                // System.out.println(vowels);
     }
 
     // task 1 --START
@@ -133,5 +132,4 @@ public class Main {
         return vowels.toString();
       }
     //task 5 --END
-
 }
