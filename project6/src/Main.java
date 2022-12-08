@@ -37,16 +37,17 @@ public class Main {
 
 
     public static void main(String[] args) {
-        int[] arr = new int[10];                       // Способ создания и вывода на консоль массива со случайными числами(нехороший)
+        // int[] arr = new int[10];                       // Способ создания и вывода на консоль массива со случайными числами(нехороший)
 
-        for (int i = 0; i < arr.length; i++) {
-                arr[i] = random.nextInt(10);
-                System.out.print(arr[i] + " ");   // Не делает переход на новую строку
-        }
+        // for (int i = 0; i < arr.length; i++) {
+        //         arr[i] = random.nextInt(10);
+        //         System.out.print(arr[i] + " ");   // Не делает переход на новую строку
+        // }
 
-        System.out.println();    // Переход на новую строку
+        // System.out.println();    // Переход на новую строку
 
-        int[] arr1 = createArray(100, 50);
+        // int[] arr1 = createArray(100, 50);
+        int[] arr1 = {1,2,3,4,9,8,7,6,5,0,100};
         System.out.println("Массив до сортировки: ");
         printArray(arr1);
 
@@ -54,67 +55,67 @@ public class Main {
         System.out.println("Массив после сортировки: ");
         printArray(arr1);
 
-        Scanner scanner = new Scanner(System.in);
+        // Scanner scanner = new Scanner(System.in);
 
-        while (true){           // Классический пример бесконечного цикла
-           System.out.println("Введите операцию: \n" +      // Выводим варианты запросов
-                   "Умножение - *\n" +
-                   "Деление - /\n"  +
-                   "Возведение в степень - ^\n" +
-                   "Извлечение квадратного корня - s\n" +
-                   "Выход - e \n");
-           char ch = scanner.next().charAt(0);          // Считываем запрос
-            if (ch == '*') {                  //Обрабатываем запросы
-                System.out.println("Введите первое число: ");
-                int i = scanner.nextInt();
-                System.out.println("Введите второе число: ");
-                int i1 = scanner.nextInt();
-                multiply(i, i1);
-            }
-            else if(ch == '/'){
-                System.out.println("Введите первое число: ");
-                int i = scanner.nextInt();
-                System.out.println("Введите второе число: ");
-                int i1 = scanner.nextInt();
-                div(i, i1);
-            }
-            else if(ch == '^'){
-                System.out.println("Введите число: ");
-                int i = scanner.nextInt();
-                System.out.println("Введите степень: ");
-                int i1 = scanner.nextInt();
-                power(i, i1);
-            }
-            else if(ch == 's'){
-                System.out.println("Введите первое число: ");
-                int i = scanner.nextInt();
-                sqrt(i);
-            }
+        // while (true){           // Классический пример бесконечного цикла
+        //    System.out.println("Введите операцию: \n" +      // Выводим варианты запросов
+        //            "Умножение - *\n" +
+        //            "Деление - /\n"  +
+        //            "Возведение в степень - ^\n" +
+        //            "Извлечение квадратного корня - s\n" +
+        //            "Выход - e \n");
+        //    char ch = scanner.next().charAt(0);          // Считываем запрос
+        //     if (ch == '*') {                  //Обрабатываем запросы
+        //         System.out.println("Введите первое число: ");
+        //         int i = scanner.nextInt();
+        //         System.out.println("Введите второе число: ");
+        //         int i1 = scanner.nextInt();
+        //         multiply(i, i1);
+        //     }
+        //     else if(ch == '/'){
+        //         System.out.println("Введите первое число: ");
+        //         int i = scanner.nextInt();
+        //         System.out.println("Введите второе число: ");
+        //         int i1 = scanner.nextInt();
+        //         div(i, i1);
+        //     }
+        //     else if(ch == '^'){
+        //         System.out.println("Введите число: ");
+        //         int i = scanner.nextInt();
+        //         System.out.println("Введите степень: ");
+        //         int i1 = scanner.nextInt();
+        //         power(i, i1);
+        //     }
+        //     else if(ch == 's'){
+        //         System.out.println("Введите первое число: ");
+        //         int i = scanner.nextInt();
+        //         sqrt(i);
+        //     }
 
-            if(ch == 'e'){     // Выходим из цикла
-                break;
-            }
-        }
+        //     if(ch == 'e'){     // Выходим из цикла
+        //         break;
+        //     }
+        // }
 
 
     }
 
-    private static void sqrt(int i) {
-        System.out.println("Корень: " + Math.sqrt(i));   // Извлекаем корень
-    }
+    // private static void sqrt(int i) {
+    //     System.out.println("Корень: " + Math.sqrt(i));   // Извлекаем корень
+    // }
 
 
-    private static void power(int i, int i1) {
-        System.out.println("Степень: " + Math.pow(i, i1)); // Возводим в степень
-    }
+    // private static void power(int i, int i1) {
+    //     System.out.println("Степень: " + Math.pow(i, i1)); // Возводим в степень
+    // }
 
-    private static void div(int i, int i1) {
-        System.out.println("Частное: " + i/i1);
-    }
+    // private static void div(int i, int i1) {
+    //     System.out.println("Частное: " + i/i1);
+    // }
 
-    private static void multiply(int i, int i1) {
-        System.out.println("Умноженные значения: " + i*i1);
-    }
+    // private static void multiply(int i, int i1) {
+    //     System.out.println("Умноженные значения: " + i*i1);
+    // }
 
     // Сортировка пузырьком
     private static int[] sortArr(int[] arr) {
