@@ -13,54 +13,54 @@ import java.util.Scanner;
  */
 
 public class Main {
+
+    static Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) throws Exception {
         // int[] arr_i = new int [10];
         // double[] arr_d = new double [10];
 
-        int[] arr_i = { 1, 3, 4, 5, 6, 7, 8, 9, 12, 15, 18,21,24};
+        int[] arr_i = { 1, 3, 4, 5, 6, 7, 8, 9, 12, 15, 18, 21, 24 };
         double[] arr_d = { 1.1, 2.1, 3.1, 4.1, 5.1, 6.1, 7.1, 8.1, 9.1 };
         String input = "Hello World and Hello Anatoliy";
 
         // task 1
-                // render_i(arr_i);
-                // render_d(arr_d);
+        // render_i(arr_i);
+        // render_d(arr_d);
 
         // task 2
-                // calc();
+        calc();
 
         // task 3
-                    kratn_trem(arr_i);
+        kratn_trem(arr_i);
 
         // task 4
-                    // reverseArr(arr_i);
+        // reverseArr(arr_i);
 
-
-        // task 5          
-                // String vowels = getVowels(input);
-                // System.out.println(vowels);
+        // task 5
+        // String vowels = getVowels(input);
+        // System.out.println(vowels);
     }
 
     // task 1 --START
-    public static void render_i(int[] a) {
-        for (int i = 0; i < a.length; i++) {
-            System.out.println(a[i]);
-        }
-    }
+    // public static void render_i(int[] a) {
+    // for (int i = 0; i < a.length; i++) {
+    // System.out.println(a[i]);
+    // }
+    // }
 
-    public static void render_d(double[] a) {
-        for (int i = 0; i < a.length; i++) {
-            System.out.println(a[i]);
-        }
-    }
+    // public static void render_d(double[] a) {
+    // for (int i = 0; i < a.length; i++) {
+    // System.out.println(a[i]);
+    // }
+    // }
     // task 1 -- END
-
-
 
     // task 2 -- start
     public static void calc() {
         int x = 0;
-        for (;;) {
-            Scanner scanner = new Scanner(System.in);
+        while (true) {
+
             System.out.println("enter num");
             String dig = scanner.nextLine();
 
@@ -73,8 +73,6 @@ public class Main {
         }
     }
     // task 2 -- END
-
-
 
     // task 3 -- START
     public static void kratn_trem(int[] argum) {
@@ -108,8 +106,6 @@ public class Main {
     }
     // task3 -- END
 
-
-
     // task 4 -- START
     public static void reverseArr(int[] arg) {
         for (int i = arg.length - 1; i >= 0; i--) {
@@ -121,15 +117,16 @@ public class Main {
     }
     // task 4 -- END
 
-    //task 5 --START ---    process -> https://www.youtube.com/watch?v=9B0dXtcbKXQ
+    // task 5 --START --- process -> https://www.youtube.com/watch?v=9B0dXtcbKXQ
     public static String getVowels(String input) {
         StringBuilder vowels = new StringBuilder();
         for (char c : input.toCharArray()) {
-          if (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U' || c == 'y' || c == 'Y') {
-            vowels.append(c);
-          }
+            if (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u'
+                    || c == 'U' || c == 'y' || c == 'Y') {
+                vowels.append(c);
+            }
         }
         return vowels.toString();
-      }
-    //task 5 --END
+    }
+    // task 5 --END
 }
