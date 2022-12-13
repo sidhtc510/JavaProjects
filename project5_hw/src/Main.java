@@ -112,7 +112,6 @@ public class Main {
             if (i % 2 != 0) {
                 System.out.println("key: " + i + " ------ value: " + arg[i]);
             }
-
         }
     }
     // task 4 -- END

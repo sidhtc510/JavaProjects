@@ -32,30 +32,28 @@ public class App {
         // CALCULATOR END
 
         // BUBBLE SORT START
-        int[] arr = {2,45,12,6,8,9,11,10,124,1,0,3};
+        int[] arr = { 2, 45, 12, 6, 8, 9, 11, 10, 124, 1, 0, 3 };
 
         Bubble bubble = new Bubble();
         printArray(bubble.sortAsc(arr));
         printArray(bubble.sortDesc(arr));
 
         // for (int i = 0; i < arr.length; i++) {
-         
-        //     System.out.print(bubble.sortDesc(arr));
+
+        // System.out.print(bubble.sortDesc(arr));
         // }
-        
-      
 
         // BUBBLE SORT END
 
         // GAME START
-        // Game game = new Game();
+        Game game = new Game();
 
-        // int i = 0;
-        // while (i < 10) {
-        // System.out.println("game # " + (i + 1));
-        // game.randomGame();
-        // i++;
-        // }
+        int i = 0;
+        while (i < 10) {
+        System.out.println("game # " + (i + 1));
+        game.randomGame();
+        i++;
+        }
 
         // int i = 0;
         // while (i < 10) {
@@ -67,10 +65,10 @@ public class App {
         // GAME OVER
     }
 
-    public static void printArray(int[] arr){  
+    public static void printArray(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
-        System.out.println();  
+        System.out.println();
     }
 }
