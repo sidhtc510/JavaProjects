@@ -1,5 +1,5 @@
 import java.util.Random;
-import java.util.Scanner;
+// import java.util.Scanner;
 
 public class Main {
 
@@ -85,10 +85,10 @@ public class Main {
            System.out.println(arr[i]);
         }
 
-        Scanner scanner = new Scanner(System.in);
-                                           //Ваня Маша Дима
-        String str = scanner.next();
-        String[] arr1 = str.split(" ");  // Пример разделения строки по условию. Вверху сама строка, делим по пробелу
+        // Scanner scanner = new Scanner(System.in);
+        //                                    //Ваня Маша Дима
+        // String str = scanner.next();
+        // String[] arr1 = str.split(" ");  // Пример разделения строки по условию. Вверху сама строка, делим по пробелу
 
         Random random = new Random();        // Пример генерации случайных строк(имен)
         for (int i = 0; i < 10; i++) {
