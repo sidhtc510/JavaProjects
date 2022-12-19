@@ -61,6 +61,8 @@ public class Main {
         stringBuilder.delete(2, 4);
         System.out.println(stringBuilder);
 
+
+        
         // stringBuilder.deleteCharAt(4);
         // System.out.println(stringBuilder);
 
