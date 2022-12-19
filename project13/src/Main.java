@@ -1,81 +1,161 @@
 import java.util.Scanner;
 
 public class Main {
+
+    /*
+    План занятия
+    1) Тернарные операторы
+    2) Работа со строками. Классы: String, StringBuilder, StringBuffer
+     */
+
+
+    /*
+    Теория
+    Тернарный оператор - аналог if - else. Может в более компактной форме записать условное выражение, но только одно
+
+    Тернарный оператор:
+     Условие? true: false
+     String str = a > 10? "Правильно": "Неправильно";
+
+     В Java есть 3 класса для работы со строками: String, StringBuilder и StringBuffer;
+
+     String - immutable(неизменяемый класс), значения его объектов невозможно изменить, при изменении строки происходит
+     создание нового объекта. К особенностям String также относится хранение значений в специальном пуле строк, если
+     строки совпадают, то новое значение не добавляется, а просто прописывается ссылка на уже существующую строку
+
+     String str = "Привет! ";
+     str = "Пока" ;  - это строка создает новый объект и записывает ссылку в str, если более ссылок на "Привет! " в пуле
+     нет, то сборщик мусора(garbage collector) удалит эту строку. Запуск сборщика мусора замедляет работу приложения, т.к.
+     требует системных ресурсов.
+     String str1  = "Пока"
+
+     Пулл строк
+     "Привет! " - str (Запускается сборщик мусора и удаляет значение)
+     "Пока"   - str, str1 (Экономия памяти, за счет использования пула, т.е. в нем только одно одинаковое значение)
+
+     String имеет свои преимущества: экономия памяти, гарантии неизменняемости объектов, как и недостатки: неэффективное
+     переиспользование ссылок, ввиду неизменяемости объектов, частые запуски сборщика мусора, поэтому данный класс не подходит,
+     если нужно часто менять строки.
+
+     Если строки нужно часто менять, на помощь приходят классы StringBuffer и StringBuilder. Эти классы полностью функционально
+     эквиваленты, т.е. имеют методы с одинаковыми названиями и одинаковым функционалом.
+
+     StringBuilder предназначен для работы в однопоточной среде, а StringBuffer для работы во многопоточной среде
+
+     Методы StringBuilder и StringBuffer:
+     append() - добавит строку
+
+     delete(int start, int end) — удаляет подстроку символов начиная с позиции start, заканчивая end
+    deleteCharAt(int index) — удаляет символ в позиции index
+    insert(int offset, String str) — вставляет строку str в позицию offset. Метод insert также перегружен и может принимать различные аргументы
+    replace(int start, int end, String str) — заменит все символы начиная с позиции start до позиции end на str
+    reverse() — меняет порядок всех символов на противоположный
+    substring(int start) — вернет подстроку, начиная с позиции start
+    substring(int start, int end) — вернет подстроку, начиная с позиции start до позиции end
+
+
+
+
+
+     */
+
+    /*
+    Заметки
+    Каждая программа, которая не завершается автоматически работает в бесконечном цикле(главный цикл)
+    Регулярные выражения - способ задачи шаблонов для строки - работа со строкой как со множеством символов
+    Чтобы значение нельзя было изменить нужно сделать его константой, т.е. добавить модификатор final
+    Бекапы бывают разные в общем смысле - это сохранение состояния программы в постоянной памяти.
+    Для String в java перегружен оператор =, он создает новый объект, также как и new
+
+     */
+
+    /*
+    Классная работа
+    Задача 1
+    Реализовать проверку числа в бесконечном цикле, у пользователя должна  быть возможность прервать цикл или продолжить
+    проверку. Также реализовать проверку корректного ввода
+
+    Задача 2
+    Используя тернарный оператор присвоить значение переменной b
+
+     */
+
     static Scanner scanner = new Scanner(System.in);
 
     static StringBuilder stringBuilder = new StringBuilder();
     static StringBuffer stringBuffer = new StringBuffer();
 
+
     public static void main(String[] args) {
         // Задача 1
-        // int a;
-        // while (true) {
-        // a = scanner.nextInt(); // ДЗ *. Проверить введено ли число
-        // String str;
-        // // if(a >= 10){ Аналог тернарного оператора, далее запишем тоже, компактно
-        // // str = "Правильно";
-        // // }
-        // // else {
-        // // str = "Неправильно";
-        // // }
+        int a;
+     while (true){
+         a = scanner.nextInt();      // ДЗ *. Проверить введено ли число
+         String str;
+//         if(a >= 10){                Аналог тернарного оператора, далее запишем тоже, компактно
+//            str = "Правильно";
+//         }
+//         else {
+//             str = "Неправильно";
+//         }
 
-        // // Инициализация Сравнение true false
+         // Инициализация  Сравнение    true         false
 
-        // str = a >= 10 ? "Правильно" : "Неправильно"; // Тернарный оператор.
-
-        // System.out.println(str);
-
-        // System.out.println("Выйти из цикла? y - да, n - нет"); // Условие выхода из
-        // цикла
-
-        // char c = scanner.next().charAt(0);
-
-        // while (c != 'y' && c != 'n') { // Проверяем корректность ввода
-        // System.out.println("Неправильный ввод");
-        // System.out.println("Выйти из цикла? y - да, n - нет");
-        // c = scanner.next().charAt(0);
-        // }
-        // if (c == 'y') {
-        // break; // Прервать цикл
-        // }
-        // if (c == 'n') {
-        // System.out.println("Выйти из цикла? y - да, n - нет");
-        // continue; // Продолжить с новой итерации цикла
-
-        // }
-
-        // }
-        // // Задача 2
-        // System.out.println("enter num");
-        // a = scanner.nextInt();
-        // int b = a > 5 || a < 0 ? 5 : 1; // Работа с тернарным оператором для
-        // присвоения значения int
-
-        // System.out.println(b);
-        stringBuilder.append("hello from stringBuilder");
-        stringBuffer.append("hello from stringBuilder");
-        System.out.println(stringBuilder);
-
-        
-        String str = stringBuilder.toString();
-        stringBuilder.delete(2, 4);
-        System.out.println(stringBuilder);
+              str = a >= 10? "Правильно": "Неправильно";   // Тернарный оператор.
 
 
+         System.out.println(str);
 
-        // stringBuilder.deleteCharAt(4);
-        // System.out.println(stringBuilder);
+         System.out.println("Выйти из цикла?  y - да, n - нет");     // Условие выхода из цикла
 
-        // stringBuilder.insert(2,"!!!!!!!");
-        // System.out.println(stringBuilder);
+         char c = scanner.next().charAt(0);
 
-        // stringBuilder.replace(2,4, "stroka");
-        // System.out.println(stringBuilder);
+         while (c != 'y' && c != 'n'){  // Проверяем корректность ввода
+             System.out.println("Неправильный ввод");
+             System.out.println("Выйти из цикла?  y - да, n - нет");
+             c = scanner.next().charAt(0);
+         }
+         if(c == 'y'){
+             break;           // Прервать цикл
+         }
+         if (c == 'n') {
+             continue;        // Продолжить с новой итерации цикла
+         }
 
-        // stringBuilder.reverse();
-        // System.out.println(stringBuilder);
+     }
+        // Задача 2
+     a = scanner.nextInt();
+     int b = a > 5 || a < 0 ? 5: 1;    // Работа с тернарным оператором для присвоения значения int
 
-        // stringBuffer.substring(2, 7);
-        System.out.println(stringBuffer.substring(2, 7));
+     System.out.println(b);
+
+     stringBuilder.append("Привет, StringBuilder");
+
+     System.out.println(stringBuilder);
+
+     String str = stringBuilder.toString(); // Перевожу в строку
+
+    stringBuilder.delete(2, 4);
+    System.out.println("После модификации: " + stringBuilder);
+
+    System.out.println("Сохраненная строка: " + str);
+    stringBuilder = new StringBuilder(str);
+    stringBuilder.append( " !");
+
+    System.out.println(stringBuilder);
+
+
     }
+
+    /*
+    Задач дз
+    1) Написать 15 тернарных операторов
+    2) Показать работу с методами классов String, StringBuilder и StringBuffer
+     */
+
+    /*
+    Задачи *
+    1) Дописать программу, так чтобы не было возможности ввести символ там, где нужны числа
+    2) Написать класс для проверки примитивных типов. Подсказка: использовать полиморфизм
+     */
 }
