@@ -52,17 +52,17 @@ public class Main {
         // присвоения значения int
 
         // System.out.println(b);
-
         stringBuilder.append("hello from stringBuilder");
         stringBuffer.append("hello from stringBuilder");
         System.out.println(stringBuilder);
 
+        
         String str = stringBuilder.toString();
         stringBuilder.delete(2, 4);
         System.out.println(stringBuilder);
 
 
-        
+
         // stringBuilder.deleteCharAt(4);
         // System.out.println(stringBuilder);
 
