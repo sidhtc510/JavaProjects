@@ -29,7 +29,7 @@ public class Main {
         // render_d(arr_d);
 
         // task 2
-        calc();
+        // calc();
 
         // task 3
         kratn_trem(arr_i);
